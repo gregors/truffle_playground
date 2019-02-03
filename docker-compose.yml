@@ -1,0 +1,17 @@
+version: '3'
+services:
+  ganache:
+    image: trufflesuite/ganache-cli
+    ports:
+      - "8585:8545"
+  truffle:
+    build: .
+    command: /bin/sh 
+    depends_on:
+      - ganache
+    stdin_open: true
+    tty: true
+    ports:
+      - "7001:8080"
+    volumes:
+      - ./:/usr/src
