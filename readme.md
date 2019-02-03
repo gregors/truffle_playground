@@ -35,8 +35,8 @@ uncomment development and change host
  host: "ganache",
 ```
 
-## Test to see if tests pass
-in docker constainer
+## Run Tests
+in docker container
 
 ```
 truffle test --network development
